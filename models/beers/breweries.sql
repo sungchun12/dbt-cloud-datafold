@@ -4,8 +4,8 @@
 ) }}
 
 SELECT
-  id                    AS brewery_id_forced_error,
-  trim(name)            AS brewery_name,
+  id                    AS brewery_id,
+  trim(name)            AS brewery_names,
   trim(city)            AS brewery_city,
   trim(state)           AS brewery_state,
   'USA'                 AS brewery_country
