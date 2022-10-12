@@ -21,7 +21,7 @@ SELECT
 
  orders.order_no                            AS order_no,
  order_lines.order_line                     AS order_line,
- orders.created_at                          AS order_created_at,
+ orders.created_at                          AS order_created_at_XYZ,
  order_lines.quantity                       AS order_li_quantity,
  order_lines.price                          AS order_li_price_each,
  order_lines.quantity * order_lines.price   AS order_li_price_total
@@ -30,4 +30,4 @@ FROM {{ ref('orders') }} orders
 JOIN {{ ref('order_lines') }} order_lines USING (order_no)
 JOIN {{ ref('beers_with_breweries') }} beers_with_breweries USING (beer_id)
 
-WHERE orders.status = 'PENDING'
+WHERE orders.status = 'DELIVERED'
