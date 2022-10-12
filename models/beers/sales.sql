@@ -21,8 +21,8 @@ SELECT
 
  orders.order_no                            AS order_no,
  order_lines.order_line                     AS order_line,
- orders.created_at                          AS order_created_at,
- order_lines.quantity                       AS order_li_quantity,
+ orders.created_at                          AS order_created_at_XYZ,
+ order_lines.quantity                       AS order_li_quantity_XYZ,
  order_lines.price                          AS order_li_price_each,
  order_lines.quantity * order_lines.price   AS order_li_price_total
 
